@@ -59,7 +59,7 @@ const auth = {
             }
 
             const user = results[0];
-            console.log(results, password, user.password)
+            
             bcrypt.compare(password, user.password, (err, isMatch) => {
                 if(err) {
                     return res.status(500).json({ msg: "Помилка на сервері" });
